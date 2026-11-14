@@ -1,0 +1,6 @@
+[submodule "extensions/hello-world"]
+	path = extensions/hello-world
+	url = https://github.com/bossgate/tg-hello-world.git
+[submodule "extensions/pro-notes"]
+	path = extensions/pro-notes
+	url = https://github.com/bossgate/tg-pro-notes.git
