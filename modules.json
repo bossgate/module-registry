@@ -1,3 +1,6 @@
 {
-  "modules": {}
+  "modules": {
+    "hello-world": { "version": "1.0.0" },
+    "pro-notes": { "license": "paid", "price_usd": 5, "category": "Productivity", "version": "1.0.0" }
+  }
 }
