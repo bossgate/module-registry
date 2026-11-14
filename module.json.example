@@ -1,0 +1,13 @@
+{
+  "id": "invoice-pro",
+  "title": "Invoice Pro",
+  "version": "1.2.0",
+  "summary": "Create, send and track invoices from any Trongate v2 app.",
+  "description": "Longer text shown on the module page.\n\nFeatures:\n- PDF invoices\n- Client management",
+  "license": "MIT",
+  "authors": ["Your Name"],
+  "homepage": "https://example.com/invoice-pro",
+  "category": "Business",
+  "tags": ["invoices", "pdf", "billing"],
+  "trongate_version": "2.x"
+}

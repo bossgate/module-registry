@@ -1,0 +1,23 @@
+# Copy to  .github/workflows/release.yml  inside EACH module repo (free and paid).
+# Push a tag like v1.2.0 and it builds a clean zip and attaches it to a GitHub Release.
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package module
+        run: |
+          NAME="${GITHUB_REPOSITORY#*/}"
+          mkdir -p /tmp/dist
+          zip -r "/tmp/dist/${NAME}-${GITHUB_REF_NAME}.zip" . \
+            -x '.git/*' '.github/*' 'tests/*' 'docs/*' '*.md.draft'
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" /tmp/dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes
