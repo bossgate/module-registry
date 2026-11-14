@@ -1,4 +1,20 @@
 {
   "schema": 1,
-  "modules": []
+  "modules": [
+    {
+      "slug": "hello-world",
+      "repo": "bossgate/tg-hello-world",
+      "license": "free",
+      "ref": "v1.0.0"
+    },
+    {
+      "slug": "pro-notes",
+      "repo": "bossgate/tg-pro-notes",
+      "license": "paid",
+      "price_usd": 5,
+      "ref": "v1.0.0",
+      "delivery": "zipball",
+      "category": "Productivity"
+    }
+  ]
 }
